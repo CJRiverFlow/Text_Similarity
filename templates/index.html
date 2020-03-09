@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename = 'main.css')}}">
+
+    <title>Text Similarity</title>
+</head>
+<body>
+
+ <div class="text-center">   
+    <h1>Find Text Similarity</h1>
+
+    <div class="text-container">
+
+		<form action="{{ url_for('find_similarity')}}" method="POST">
+            <p>Write First sentence here</p>
+                <textarea name="sentence1" rows="4" cols="50" required></textarea>
+            <br/>
+            
+            <p>Write Second sentence here</p>
+                <textarea name="sentence2" rows="4" cols="50" required></textarea>
+            <br/>
+
+		    <input type="submit" class="btn-info" value="Meassure">
+		
+	    </form>
+		
+    </div>
+        <br>
+
+        {% if result %}
+        <div class="container">
+            <div class="alert alert-success" with="500px" role="alert">
+            <p class="alert-heading">Text Similarity result: </p>
+            <p>{{result}}</p>
+            </div>     
+        </div>
+        {% endif %}
+
+        {% if error_message %}
+        <div class="container">
+            <div class="alert alert-danger" role="alert">
+            <p class="alert-heading">Error</p>
+            <p>{{error_message}}</p>
+            </div>     
+        </div>
+        {% endif %}
+    
+
+</div>
+</body>
+</html>
