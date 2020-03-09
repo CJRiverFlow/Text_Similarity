@@ -17,9 +17,7 @@ The app can be tested accessing to **localhost:5000**
 
 It is easy to use, just write two sentences and click on Meassure button to run the function.
 
-![image](https://drive.google.com/uc?export=view&id=1nRJJct-DoyRx8Moe3lPBOSK-OccXUw-h)
+Several Unit test can be done in the container by executing:
 
-Several Unit test can be done by executing:
-
-`python tests.py`
+`python3 tests.py`
 
