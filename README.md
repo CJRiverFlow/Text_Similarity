@@ -1,23 +1,28 @@
 # Text Similarity App
-## NLP dockerized Flask app
+## NLP containerized flask app
 
-This Flask app measure the cosine of similarity using spaCy.
 
-The app could be deployed with docker cloning this repo and executing the Dockerfile.
+## Description
 
-From the cloned repository run:
+Webapp for measuring the cosine of similarity using spaCy.
 
-`docker build -t flaskapp .`
+![](images/nlp-text-sim.PNG)
+
+Write two sentences and click on Meassure button to run the function.
+
+## Testing the app
+
+Clone the repository and build the docker image with:
+
+`docker build -t text_similarity .`
 
 Once done you can run the docker with:
 
-`docker run -it -p 5000:5000 flaskapp`
+`docker run -it -p 5000:5000 text_similarity`
 
-The app can be tested accessing to **localhost:5000** 
+The app can be tested accessing to **https://localhost:5000** 
 
-It is easy to use, just write two sentences and click on Meassure button to run the function.
-
-![image](https://drive.google.com/uc?export=view&id=1nRJJct-DoyRx8Moe3lPBOSK-OccXUw-h)
+## Unit Tests
 
 Several Unit test can be done by executing:
 
