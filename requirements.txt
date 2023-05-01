@@ -1,5 +1,5 @@
 spacy==2.2.3
-flask==1.1.1
+flask==2.3.2
 flask-testing==0.8.0
 https://github.com/explosion/spacy-models/releases/download/en_core_web_md-2.2.5/en_core_web_md-2.2.5.tar.gz#egg=en_core_web_md==2.2.5 
 
